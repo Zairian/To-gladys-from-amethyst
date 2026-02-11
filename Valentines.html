@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Gladys 💘</title>
+<style>
+body{
+    margin:0;
+    background:radial-gradient(circle,#1a0000,#000);
+    overflow:hidden;
+    text-align:center;
+    font-family:Segoe UI;
+    color:white;
+}
+
+/* Neon name */
+h1{
+    margin-top:100px;
+    font-size:60px;
+    color:#ff4d6d;
+    text-shadow:0 0 10px #ff4d6d,0 0 20px #ff1e4d,0 0 40px red;
+}
+
+button{
+    padding:15px 30px;
+    margin:20px;
+    border-radius:30px;
+    border:none;
+    background:#ff4d6d;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+}
+
+button:hover{
+    transform:scale(1.1);
+    background:#ff1e4d;
+}
+
+.heart{
+    position:fixed;
+    bottom:-10px;
+    animation:floatUp 6s linear infinite;
+}
+
+@keyframes floatUp{
+    0%{transform:translateY(0);opacity:1;}
+    100%{transform:translateY(-100vh);opacity:0;}
+}
+</style>
+</head>
+<body>
+
+<h1>Gladys ❤️</h1>
+<h2>You are my forever.</h2>
+<h3>— Amethyst 🌹</h3>
+
+<button onclick="celebrate()">YES 💖</button>
+<button onclick="alert('No is not an option 😌❤️')">NO 😏</button>
+
+<audio autoplay loop>
+<source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_c8b1c7e3d5.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+// Floating hearts
+setInterval(function(){
+    const heart=document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML="❤️";
+    heart.style.left=Math.random()*100+"vw";
+    heart.style.fontSize=Math.random()*20+20+"px";
+    document.body.appendChild(heart);
+    setTimeout(()=>heart.remove(),6000);
+},300);
+
+// Fireworks hearts
+function celebrate(){
+    for(let i=0;i<50;i++){
+        let spark=document.createElement("div");
+        spark.innerHTML="💖";
+        spark.style.position="fixed";
+        spark.style.left="50%";
+        spark.style.top="50%";
+        spark.style.fontSize="20px";
+        spark.style.transform=`translate(${Math.random()*400-200}px,${Math.random()*400-200}px)`;
+        document.body.appendChild(spark);
+        setTimeout(()=>spark.remove(),1000);
+    }
+    setTimeout(()=>window.location.href="love.html",1200);
+}
+</script>
+
+</body>
+</html>
