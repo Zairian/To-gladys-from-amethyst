@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Love ❤️</title>
+<style>
+body{
+    background:linear-gradient(to right,#1a0000,#000);
+    text-align:center;
+    font-family:Segoe UI;
+    color:white;
+}
+
+h1{
+    color:#ff4d6d;
+    text-shadow:0 0 15px red;
+}
+
+button{
+    padding:12px 25px;
+    margin:15px;
+    border-radius:25px;
+    border:none;
+    background:#ff4d6d;
+    color:white;
+    cursor:pointer;
+}
+
+button:hover{
+    transform:scale(1.1);
+    background:#ff1e4d;
+}
+
+#content{
+    margin-top:30px;
+    padding:20px;
+    color:#ffccd5;
+}
+</style>
+</head>
+<body>
+
+<h1>Gladys, My Queen 🌹</h1>
+<h3>Forever Yours, Amethyst ❤️</h3>
+
+<button onclick="showReasons()">Reasons 💌</button>
+<button onclick="openSong()">Perfect 🎶</button>
+<button onclick="girlfriend()">Be Mine 💍</button>
+<button onclick="treasure()">Treasure 🌹</button>
+<br>
+<button onclick="goBack()">⬅ Back</button>
+
+<div id="content"></div>
+
+<script>
+function showReasons(){
+document.getElementById("content").innerHTML=
+"Your smile heals me.<br><br>You are my peace.<br><br>You are my happiness.<br><br>You inspire me.<br><br>You are my home.";
+}
+
+function openSong(){
+window.open("https://www.youtube.com/watch?v=2Vv-BfVoq4g","_blank");
+}
+
+function girlfriend(){
+document.getElementById("content").innerHTML=
+"Gladys ❤️ Will you be my girlfriend officially? I promise forever. - Amethyst";
+}
+
+function treasure(){
+document.getElementById("content").innerHTML=
+"I treasure your heart, your presence, your love. You are rare. You are precious. - Amethyst ❤️";
+}
+
+function goBack(){
+window.location.href="valentine.html";
+}
+</script>
+
+</body>
+</html>
