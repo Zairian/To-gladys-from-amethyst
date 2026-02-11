@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>For Gladys ❤️</title>
+<style>
+body{
+    margin:0;
+    height:100vh;
+    background:black;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    font-family:Segoe UI;
+    color:white;
+}
+
+/* Moving stars */
+body::before{
+    content:"";
+    position:absolute;
+    width:200%;
+    height:200%;
+    background:url("https://www.transparenttextures.com/patterns/stardust.png");
+    animation:moveStars 60s linear infinite;
+    opacity:0.3;
+}
+
+@keyframes moveStars{
+    from{transform:translate(0,0);}
+    to{transform:translate(-500px,-500px);}
+}
+
+h1{
+    font-size:40px;
+    color:#ff4d6d;
+    z-index:1;
+}
+
+input{
+    padding:10px;
+    border-radius:20px;
+    border:none;
+    text-align:center;
+    margin-top:10px;
+    z-index:1;
+}
+
+button{
+    padding:10px 20px;
+    border-radius:20px;
+    border:none;
+    background:#ff4d6d;
+    color:white;
+    margin-top:10px;
+    cursor:pointer;
+    z-index:1;
+}
+</style>
+</head>
+<body>
+
+<h1>Only For Gladys ❤️</h1>
+<p style="z-index:1;">Enter our secret word</p>
+
+<input type="password" id="pass" placeholder="Password">
+<button onclick="checkPass()">Enter</button>
+
+<script>
+function checkPass(){
+    if(document.getElementById("pass").value==="forever"){
+        window.location.href="valentine.html";
+    } else {
+        alert("Wrong password ❤️");
+    }
+}
+</script>
+
+</body>
+</html>
